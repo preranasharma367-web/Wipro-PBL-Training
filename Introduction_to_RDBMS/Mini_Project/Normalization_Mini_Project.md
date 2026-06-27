@@ -106,3 +106,47 @@ This is called a **Partial Dependency**, which violates the rules of Second Norm
 ### Result
 
 The table is now in **Second Normal Form (2NF)** because the partial dependency has been removed by separating employee and training information into different tables.
+
+---
+
+# Question 3
+
+### Problem Statement
+
+Normalize the following table into **Third Normal Form (3NF)**.
+
+### Original Table
+
+| Member_ID | First_Name | Last_Name | Sports | Fees |
+|-----------|------------|-----------|--------|------|
+| 101 | Rajesh | Chand | Cricket | 100 |
+| 102 | Jayesh | Raj | Hockey | 80 |
+| 103 | Mark | Dorson | Football | 90 |
+
+### Observation
+
+The attribute **Fees** depends on **Sports** rather than directly on **Member_ID**.
+
+This creates a **Transitive Dependency**, which violates the rules of Third Normal Form (3NF).
+
+### 3NF Solution
+
+#### MEMBER Table
+
+| Member_ID | First_Name | Last_Name | Sports |
+|-----------|------------|-----------|--------|
+| 101 | Rajesh | Chand | Cricket |
+| 102 | Jayesh | Raj | Hockey |
+| 103 | Mark | Dorson | Football |
+
+#### SPORTS Table
+
+| Sports | Fees |
+|--------|------|
+| Cricket | 100 |
+| Hockey | 80 |
+| Football | 90 |
+
+### Result
+
+The table is now in **Third Normal Form (3NF)** because the transitive dependency has been removed by separating the Sports and Fees information.
