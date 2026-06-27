@@ -5,59 +5,38 @@ Normalization
 
 ---
 
-## Objective
+## Given Table Structure
 
-To identify the current normal form of the given EMPLOYEE table and convert it into the next normal form.
-
----
-
-## Given Table
-
-| EMPNO | ENAME | SAL | DEPTNO | DNAME | LOC |
-|--------|-------|-----|--------|--------|-----|
-| 101 | John | 50000 | 10 | HR | Delhi |
-| 102 | Smith | 60000 | 20 | IT | Mumbai |
-| 103 | David | 45000 | 10 | HR | Delhi |
-
----
-
-## Analysis
-
-The table contains employee details along with department information.
-
-Here,
-
-- **EMPNO** is the Primary Key.
-- **DEPTNO** determines **DNAME** and **LOC**.
-
-That means:
-
-```
-DEPTNO → DNAME, LOC
-```
-
-There is a **Transitive Dependency** because:
-
-```
-EMPNO → DEPTNO → DNAME, LOC
-```
+EMPLOYEE (EMPNO, ENAME, SAL, DEPTNO, DNAME, LOC)
 
 ---
 
 ## Current Normal Form
 
-The table is in **Second Normal Form (2NF)** because:
+The given table is in **Second Normal Form (2NF)**.
 
-- All values are atomic (1NF satisfied).
-- The primary key is a single attribute (EMPNO), so there are no partial dependencies.
+### Reason
 
-However, it is **not in Third Normal Form (3NF)** due to the transitive dependency.
+- All attributes contain atomic values, so it satisfies **First Normal Form (1NF)**.
+- The primary key is **EMPNO**, which is a single attribute, so there are no partial dependencies.
+- However, **DNAME** and **LOC** depend on **DEPTNO**, not directly on **EMPNO**.
+
+Functional Dependency:
+
+```
+EMPNO → DEPTNO
+DEPTNO → DNAME, LOC
+```
+
+This creates a **Transitive Dependency**.
+
+Therefore, the table is **not in Third Normal Form (3NF)**.
 
 ---
 
 ## Conversion to Third Normal Form (3NF)
 
-Split the table into two tables.
+The table should be divided into two tables.
 
 ### EMPLOYEE Table
 
@@ -76,6 +55,15 @@ Split the table into two tables.
 
 ---
 
+## Benefits
+
+- Removes data redundancy.
+- Eliminates update anomalies.
+- Improves data consistency.
+- Makes the database easier to maintain.
+
+---
+
 ## Conclusion
 
-The transitive dependency has been removed by separating department information into a different table. The database is now in **Third Normal Form (3NF)**.
+The given EMPLOYEE table is in **Second Normal Form (2NF)**. By separating the department details into a separate DEPARTMENT table, the transitive dependency is removed and the database is converted into **Third Normal Form (3NF)**.
