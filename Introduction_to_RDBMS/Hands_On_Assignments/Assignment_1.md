@@ -41,17 +41,14 @@ The table should be divided into two tables.
 ### EMPLOYEE Table
 
 | EMPNO | ENAME | SAL | DEPTNO |
-|--------|-------|-----|--------|
-| 101 | John | 50000 | 10 |
-| 102 | Smith | 60000 | 20 |
-| 103 | David | 45000 | 10 |
+| ----- | ----- | --- | ------ |
+| EMPNO | ENAME | SAL | DEPTNO |
 
 ### DEPARTMENT Table
 
 | DEPTNO | DNAME | LOC |
-|--------|--------|------|
-| 10 | HR | Delhi |
-| 20 | IT | Mumbai |
+| ------ | ----- | --- |
+| DEPTNO | DNAME | LOC |
 
 ---
 
