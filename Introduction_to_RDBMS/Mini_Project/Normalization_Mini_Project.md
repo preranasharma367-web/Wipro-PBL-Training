@@ -10,28 +10,19 @@ Normalization
 
 ## Objective
 
-To understand and apply the concepts of Database Normalization by converting tables into 1NF, 2NF, and 3NF.
+The objective of this mini project is to understand the concepts of Database Normalization and convert database tables into First Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF) to reduce data redundancy and improve data integrity.
 
 ---
 
-## Question 1
+## Introduction
 
-(To be added)
+Normalization is a database design technique used to organize data efficiently. It helps eliminate data redundancy, avoids insertion, update, and deletion anomalies, and ensures data consistency by dividing data into well-structured tables.
 
----
-
-## Question 2
-
-(To be added)
-
----
-
-## Question 3
-
-(To be added)
+The three normal forms covered in this project are:
+- First Normal Form (1NF)
+- Second Normal Form (2NF)
+- Third Normal Form (3NF)
 
 ---
 
-## Conclusion
-
-(To be added)
+# Question 1
