@@ -150,3 +150,24 @@ This creates a **Transitive Dependency**, which violates the rules of Third Norm
 ### Result
 
 The table is now in **Third Normal Form (3NF)** because the transitive dependency has been removed by separating the Sports and Fees information.
+---
+
+# Conclusion
+
+This mini project demonstrates the process of database normalization.
+
+- **1NF** removes repeating groups and ensures atomic values.
+- **2NF** removes partial dependencies.
+- **3NF** removes transitive dependencies.
+
+Normalization improves database design by reducing redundancy, improving consistency, and maintaining data integrity.
+
+---
+
+# Learning Outcome
+
+After completing this mini project, I learned:
+
+- The importance of database normalization.
+- How to convert tables into 1NF, 2NF, and 3NF.
+- How normalization improves database efficiency and consistency.
