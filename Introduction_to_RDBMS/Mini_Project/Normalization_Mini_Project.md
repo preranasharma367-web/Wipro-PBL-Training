@@ -59,3 +59,50 @@ The **Hobbies** column contains multiple values in a single cell. This violates 
 ### Result
 
 The table is now in **First Normal Form (1NF)** because each cell contains only a single value.
+
+---
+
+# Question 2
+
+### Problem Statement
+
+Normalize the following table into **Second Normal Form (2NF)**.
+
+### Original Table
+
+| EmpNo | Training | Training_Date | Dept |
+|-------|----------|---------------|------|
+| 101 | Oracle SQL | 12-Aug-2015 | TT |
+| 101 | Java | 21-Aug-2015 | BU |
+| 102 | Oracle SQL | 18-Sep-2014 | TT |
+
+### Composite Primary Key
+
+**(EmpNo, Training)**
+
+### Observation
+
+The attribute **Dept** depends only on **EmpNo** and not on the complete composite primary key **(EmpNo, Training)**.
+
+This is called a **Partial Dependency**, which violates the rules of Second Normal Form (2NF).
+
+### 2NF Solution
+
+#### EMPLOYEE Table
+
+| EmpNo | Dept |
+|-------|------|
+| 101 | TT |
+| 102 | TT |
+
+#### TRAINING Table
+
+| EmpNo | Training | Training_Date |
+|-------|----------|---------------|
+| 101 | Oracle SQL | 12-Aug-2015 |
+| 101 | Java | 21-Aug-2015 |
+| 102 | Oracle SQL | 18-Sep-2014 |
+
+### Result
+
+The table is now in **Second Normal Form (2NF)** because the partial dependency has been removed by separating employee and training information into different tables.
