@@ -26,3 +26,36 @@ The three normal forms covered in this project are:
 ---
 
 # Question 1
+### Problem Statement
+
+Normalize the following table into **First Normal Form (1NF)**.
+
+### Original Table
+
+| Member_ID | First_Name | Last_Name | Hobbies |
+|-----------|------------|-----------|----------|
+| 101 | Jayson | Mark | Cricket, Swimming, Football |
+| 102 | Ram | Ganesh | Swimming, Running, Music |
+| 103 | Raj | Kishore | Dancing, Singing, Running |
+
+### Observation
+
+The **Hobbies** column contains multiple values in a single cell. This violates the rule of **First Normal Form (1NF)**, which requires every attribute to contain only one atomic value.
+
+### 1NF Solution
+
+| Member_ID | First_Name | Last_Name | Hobby |
+|-----------|------------|-----------|--------|
+| 101 | Jayson | Mark | Cricket |
+| 101 | Jayson | Mark | Swimming |
+| 101 | Jayson | Mark | Football |
+| 102 | Ram | Ganesh | Swimming |
+| 102 | Ram | Ganesh | Running |
+| 102 | Ram | Ganesh | Music |
+| 103 | Raj | Kishore | Dancing |
+| 103 | Raj | Kishore | Singing |
+| 103 | Raj | Kishore | Running |
+
+### Result
+
+The table is now in **First Normal Form (1NF)** because each cell contains only a single value.
