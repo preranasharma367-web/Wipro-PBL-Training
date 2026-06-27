@@ -5,56 +5,38 @@ Normalization
 
 ---
 
-## Objective
+## Given Table Structure
 
-To identify the current normal form of the given STUDENT table and determine whether it can be further normalized.
-
----
-
-## Given Table
-
-| ROLLNO | NAME | AGE | EXAM | MARKS | GRADE |
-|--------|------|-----|------|-------|-------|
-| 101 | Rahul | 20 | DBMS | 90 | A |
-| 102 | Priya | 19 | SQL | 85 | B |
-| 103 | Amit | 21 | Oracle | 92 | A |
-
----
-
-## Analysis
-
-The table stores student information along with examination details.
-
-Assuming:
-- **ROLLNO** uniquely identifies each student.
-- **GRADE** is determined by **MARKS**.
-
-Functional Dependency:
-
-```
-MARKS → GRADE
-```
-
-This creates a **Transitive Dependency** because:
-
-```
-ROLLNO → MARKS → GRADE
-```
+STUDENT (ROLLNO, NAME, AGE, EXAM, MARKS, GRADE)
 
 ---
 
 ## Current Normal Form
 
-The table is in **Second Normal Form (2NF)** because:
+The given table is in **Second Normal Form (2NF)**.
 
-- All attributes contain atomic values (1NF).
-- There are no partial dependencies.
+### Reason
 
-However, it is **not in Third Normal Form (3NF)** because **GRADE** depends on **MARKS**, not directly on **ROLLNO**.
+- All attributes contain atomic values, so the table satisfies **First Normal Form (1NF)**.
+- The primary key is **ROLLNO**, which is a single attribute. Therefore, there are no partial dependencies.
+- However, **GRADE** depends on **MARKS**, not directly on **ROLLNO**.
+
+Functional Dependency:
+
+```
+ROLLNO → MARKS
+MARKS → GRADE
+```
+
+This creates a **Transitive Dependency**.
+
+Hence, the table is **not in Third Normal Form (3NF)**.
 
 ---
 
 ## Conversion to Third Normal Form (3NF)
+
+The table can be divided into two tables.
 
 ### STUDENT Table
 
@@ -74,6 +56,15 @@ However, it is **not in Third Normal Form (3NF)** because **GRADE** depends on *
 
 ---
 
+## Benefits
+
+- Removes data redundancy.
+- Eliminates transitive dependency.
+- Improves data consistency.
+- Makes the database easier to maintain.
+
+---
+
 ## Conclusion
 
-The transitive dependency has been removed by separating grade information into a different table. The resulting tables satisfy **Third Normal Form (3NF)**.
+The given STUDENT table is in **Second Normal Form (2NF)**. By separating the grade information into a separate table, the transitive dependency is removed and the database is converted into **Third Normal Form (3NF)**.
