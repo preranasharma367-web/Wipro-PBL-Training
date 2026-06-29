@@ -12,13 +12,6 @@ To retrieve selected employee records using the `WHERE` clause with multiple con
 
 ---
 
-## Execution Steps
-
-1. Open Oracle SQL*Plus.
-2. Connect to the SCOTT schema.
-3. Execute the SQL query.
-4. Verify the output.
-
 ---
 
 ## SQL Query
