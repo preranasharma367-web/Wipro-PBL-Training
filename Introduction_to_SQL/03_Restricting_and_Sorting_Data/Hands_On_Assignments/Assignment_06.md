@@ -2,7 +2,7 @@
 
 ## Question
 
-Create a report to display the employee name, job, and hire date for employees whose names are **SCOTT** or **TURNER**. Display the results in ascending order of hire date.
+Create a report to display the employee name, job, and hire date for employees whose names are **SCOTT** or **TURNER**. Display the results in ascending order of hire date
 
 ---
 
