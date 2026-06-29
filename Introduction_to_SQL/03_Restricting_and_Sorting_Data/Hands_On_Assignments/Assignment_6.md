@@ -12,8 +12,6 @@ To retrieve selected employee records using the `WHERE` clause with multiple con
 
 ---
 
----
-
 ## SQL Query
 
 ```sql
