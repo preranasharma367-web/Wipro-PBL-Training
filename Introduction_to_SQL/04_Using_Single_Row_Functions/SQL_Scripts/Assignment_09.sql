@@ -1,7 +1,11 @@
 -- Topic 04 : Using Single-Row Functions
--- Assignment 08
--- Format employee salary using LPAD
+-- Assignment 09
+-- Display employee salary review date
 
 SELECT ENAME,
-       LPAD(SAL, 15, '$') AS SALARY
+       HIREDATE,
+       TO_CHAR(
+           NEXT_DAY(ADD_MONTHS(HIREDATE, 6), 'MONDAY'),
+           'fmDay, "the" DDth "of" Month, YYYY'
+       ) AS REVIEW
 FROM EMP;
